@@ -26,9 +26,9 @@ const Metrix = () => {
                 {
                     value.map((u, i) => {
                         if ((i + 1) % 3 === 0) {
-                            return <><input key={i} className='box' value={value[i] === 0 ? "" : value[i]} onClick={() => handleClick(i)} name='' readOnly /> <br /></>
+                            return <><input key={i} className={`box ${value[i] !== 0 ? 'filled' : ''}`} value={value[i] === 0 ? "" : value[i]} onClick={() => handleClick(i)} name='' readOnly /> <br /></>
                         }
-                        return <><input key={i} className='box' value={value[i] === 0 ? "" : value[i]} onClick={() => handleClick(i)} name='' readOnly /></>
+                        return <><input key={i} className={`box ${value[i] !== 0 ? 'filled' : ''}`} value={value[i] === 0 ? "" : value[i]} onClick={() => handleClick(i)} name='' readOnly /></>
                     })
                 }
             </div>
